@@ -1,0 +1,224 @@
+<!DOCTYPE HTML>
+<html lang='en'>
+    <head>
+    <title>Document</title>
+    <style type="text/css">
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+    *{
+        margin:0;
+    }
+    *{
+        padding:0;
+        font-family: 'Roboto', sans-serif;
+    }
+    header{
+        height: 77px;
+        padding-left:48px;
+        display:flex;
+        align-items:center;
+        background-color:#8E44AD;
+    }
+    header img{
+        padding-left:12px;
+        width:30px;
+        height:32px;
+    }
+    h1{
+        color:white;
+        font-size:24px;
+        font-weight:700;
+    }
+    footer{
+        margin-top:100px;
+        height:77px;
+        background-color:#8E44AD;
+    }
+    #info-container{
+        display: flex;
+        flex-direction: column;
+        padding-left:48px;
+        margin-top:69px;
+        max-width: 116px;
+    }
+    h4{
+        font-size:18px;
+        font-weight:500px;
+    }
+    #users-number{
+        font-size: 18px;
+        font-weight:400;
+        border-radius: 5px;
+        border: 1px solid #BDC3C7;
+        margin-top:12px;
+        padding: 7px 3px; 
+    }
+    #get-button{
+
+        width:116px;
+        margin-top:23px;
+        padding: 10px 3px;
+        font-weight: 700;
+        font-size: 18px;
+        border-width: 0;
+        border-radius: 5px;
+        background-color:#7F8C8D;
+        color: white;
+    }
+    #users-info{
+        display:flex;
+        flex-direction: row;
+        margin-top:23px;
+    }
+    #info{
+        visibility:hidden;
+        width:50px;
+    }
+    .base{
+        font-size:18px;
+        font-weight:500px;
+        margin-top: 13px;
+    }
+    #data{
+        visibility:hidden;
+        display:flex;
+        flex-direction:column;
+        width:275px;
+        padding-left:23px;
+        text-align: right;
+    }
+    #line1{
+
+        margin-top:41px;
+        width:346px;
+        border: 1px solid #BDC3C7;
+    }
+    #name-info{
+        font-size:18px;
+        font-weight:400;
+        margin-top: 13px;
+
+    }
+
+    #email-info{
+        font-size:18px;
+        font-weight:400;
+        margin-top: 13px;
+
+    }
+    #phone-info{
+        font-size:18px;
+        font-weight:400;
+        margin-top: 13px;
+
+    }
+    #wrapper{
+        padding-left:48px;
+    }
+    #save-button{    
+        width:116px;    
+        padding: 10px 3px;
+        font-weight: 700;
+        font-size: 18px;
+        border-width: 0;
+        border-radius: 5px;
+        background-color:#9B59B6;
+        color: white;
+        cursor:pointer;
+    }
+    #save-wrapper{
+        display:flex;
+        justify-content: end;
+        width:346px;
+        margin-top:32px;
+
+    }
+    #line2{
+        margin-top:23px;
+        width:346px;
+        border: 1px solid #BDC3C7;
+    }
+    #endline-wrapper{
+        display:flex;
+        flex-direction: column;
+        padding-left:48px;
+
+    }
+    #saved{
+        margin-top:29px;
+        padding-left: 48px;
+        opacity:0;
+    }
+    #list-global{
+        display:flex;
+       flex-direction: column; 
+    }
+    #list{
+       display:flex;
+       flex-direction: column;
+    }
+    #table-list{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 16px;
+        padding-left: 48px;
+        font-size: 18px;
+        font-weight: 400;
+        width:250px;;
+    }
+    #table-list img{
+        width:15px;
+        height:15px;
+    }
+    #combine{
+        display:flex;
+        flex-direction: row;
+        align-items:center;
+        justify-content: space-between;
+        width:300px;
+    }
+    #combine img{
+       width:15px;
+       height:15px;
+       cursor: pointer;
+    }
+    #combine img:active {
+        opacity:0.5;
+    }
+    </style>
+    </head>
+    <body>
+        <header><h1>Users API</h1><img src="https://cdn-icons-png.flaticon.com/512/219/219983.png"/></header>
+        <div id="info-container">
+        <h4>user:</h4>
+        <input id="users-number" type="number" placeholder="ID" min="1" max="10"/>
+        <button id="get-button" disabled>Get</button>
+        </div>
+        <div id="wrapper">
+        <hr id="line1"/>
+        <div id="users-info">
+        <div id="info">
+            <h3 class="base">name:</h3>
+            <h3 class="base">email:</h3>
+            <h3 class="base">phone:</h3>
+        </div>
+        <div id="data">
+            <h3 id="name-info"></h3>
+            <h3 id="phone-info"></h3>
+            <h3 id="email-info"></h3>
+        </div>
+        </div>
+        </div>
+        </div>
+        <div id="endline-wrapper">
+        <div id="save-wrapper">
+        <button id="save-button">Save</button></div>
+        <hr id="line2">
+        </div>
+        <h4 id="saved">Saved</h4>
+        <div id="list-global"></div>
+        <script src="script.js"></script>
+        <footer></footer>
+    </body>
+
+</html>
