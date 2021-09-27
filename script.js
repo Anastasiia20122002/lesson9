@@ -37,18 +37,19 @@ button.addEventListener("click", async()=>{
   button.innerHTML="Get";
 });
 
+button1.addEventListener('click', ()=>{
+  const name=document.getElementById("name-info").innerHTML;
+  const email=document.getElementById("email-info").innerHTML;
+  const phone=document.getElementById("phone-info").innerHTML;
+  if(name===""||email===""||phone===""){
+    return;
+  }
+  const res=[...UsersInfoList, {name: name, email: email, phone: phone}]
+  addUserObj(res);
+})
+
 window.onload=()=>{
   getItem()
-  button1.addEventListener('click', ()=>{
-    const name=document.getElementById("name-info").innerHTML;
-    const email=document.getElementById("email-info").innerHTML;
-    const phone=document.getElementById("phone-info").innerHTML;
-    if(name===""||email===""||phone===""){
-      return;
-    }
-    const res=[...UsersInfoList, {name: name, email: email, phone: phone}]
-    addUserObj(res);
-  })
 }
 const changeOpacity=(value)=>{
 document.getElementById("saved").style.opacity=value;
