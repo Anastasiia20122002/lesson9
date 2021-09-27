@@ -6,7 +6,7 @@ const render=(res)=>{
 const containerUsers=document.getElementById("list-global");
 changeOpacity(res.length ? 1: 0);
 containerUsers.innerHTML=`${res.map((el, index)=>`<div id="list"><div id="combine"><div id="table-list">${index+1}.${el.name} <p> &nbsp; &nbsp;${el.email}</p><p> &nbsp; &nbsp;${el.phone}</div>
-<img src="https://icon-library.com/images/red-cross-icon-png/red-cross-icon-png-27.jpg" onclick="RemoveElement(${index})"/></div></div>`).join(' ')}`
+<img src="img1.png" onclick="RemoveElement(${index})"/></div></div>`).join(' ')}`
 }
 
 const addUserObj=(new_user_obj)=>{
